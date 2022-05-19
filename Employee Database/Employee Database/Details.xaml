@@ -1,0 +1,138 @@
+﻿<!--Author : Group 6-->
+    <Window x:Class="Employee_Database.Details"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Employee_Database"
+        mc:Ignorable="d"
+        Title="Details" Height="450" WindowStartupLocation="CenterScreen" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="images/background.jpg"></ImageBrush>
+        </Grid.Background>
+
+        <Viewbox Grid.Row="0" Grid.ColumnSpan="2">
+            <Label Content="Details" FontWeight="Bold">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="4"
+                        Direction="280"
+                        Color="Black"
+                        Opacity="0.5"></DropShadowEffect>
+                </Label.Effect>
+            </Label>
+        </Viewbox>
+
+        <Viewbox Grid.Row="1" Grid.Column="0">
+            <Label Content="Name">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="4"
+                        Direction="280"
+                        Color="Black"
+                        Opacity="0.5"></DropShadowEffect>
+                </Label.Effect>
+            </Label>
+        </Viewbox>
+
+        <Viewbox Grid.Row="2" Grid.Column="0">
+            <Label Content="Id Number">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="4"
+                        Direction="280"
+                        Color="Black"
+                        Opacity="0.5"></DropShadowEffect>
+                </Label.Effect>
+            </Label>
+        </Viewbox>
+
+        <Viewbox Grid.Row="3" Grid.Column="0">
+            <Label Content="Department">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="4"
+                        Direction="280"
+                        Color="Black"
+                        Opacity="0.5"></DropShadowEffect>
+                </Label.Effect>
+            </Label>
+        </Viewbox>
+
+        <Viewbox Grid.Row="4" Grid.Column="0">
+            <Label Content="Postion">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="4"
+                        Direction="280"
+                        Color="Black"
+                        Opacity="0.5"></DropShadowEffect>
+                </Label.Effect>
+            </Label>
+        </Viewbox>
+
+        <Viewbox Grid.Row="1" Grid.Column="1">
+            <Label Content="{Binding SelectedRecord.Name}">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="4"
+                        Direction="280"
+                        Color="Black"
+                        Opacity="0.5"></DropShadowEffect>
+                </Label.Effect>
+            </Label>
+        </Viewbox>
+
+        <Viewbox Grid.Row="2" Grid.Column="1">
+            <Label Content="{Binding SelectedRecord.IdNumber}">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="4"
+                        Direction="280"
+                        Color="Black"
+                        Opacity="0.5"></DropShadowEffect>
+                </Label.Effect>
+            </Label>
+        </Viewbox>
+
+        <Viewbox Grid.Row="3" Grid.Column="1">
+            <Label Content="{Binding SelectedRecord.Department}">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="4"
+                        Direction="280"
+                        Color="Black"
+                        Opacity="0.5"></DropShadowEffect>
+                </Label.Effect>
+            </Label>
+        </Viewbox>
+
+        <Viewbox Grid.Row="4" Grid.Column="1">
+            <Label Content="{Binding SelectedRecord.Position}">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="4"
+                        Direction="280"
+                        Color="Black"
+                        Opacity="0.5"></DropShadowEffect>
+                </Label.Effect>
+            </Label>
+        </Viewbox>
+
+        <Viewbox Grid.Row="5" Grid.ColumnSpan="2" Width="200" Margin="5">
+            <Button Content="Close" Click="Close_Details" Width="60" Background="Red" BorderBrush="Transparent" FontWeight="Bold">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="4"
+                        Direction="280"
+                        Color="Black"
+                        Opacity="0.5"></DropShadowEffect>
+                </Button.Effect>
+            </Button>
+        </Viewbox>
+    </Grid>
+</Window>

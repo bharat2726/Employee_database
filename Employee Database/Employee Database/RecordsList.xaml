@@ -1,0 +1,39 @@
+﻿<!--Author : Group 6-->
+    <Window x:Class="Employee_Database.RecordsList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Employee_Database"
+        mc:Ignorable="d"
+        Title="RecordsList" Height="450" WindowStartupLocation="CenterScreen" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="images/background.jpg"></ImageBrush>
+        </Grid.Background>
+
+        <Viewbox Grid.Row="0" Margin="5">
+            <ListBox Margin="5" Name="RecordList"
+                 ItemsSource="{Binding Record}" SelectedIndex="-1"
+                 SelectionChanged="ListBox_SelectionChanged"
+                 SelectedItem="{Binding SelectedRecord}">
+            </ListBox>
+        </Viewbox>
+
+        <Viewbox Grid.Row="1" Margin="5">
+            <Button Content="Close" Click="Close_RecordList" BorderBrush="Transparent" Background="Red" Width="60" FontWeight="Bold">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="4"
+                        Direction="280"
+                        Color="Black"
+                        Opacity="0.5"></DropShadowEffect>
+                </Button.Effect>
+            </Button>
+        </Viewbox>
+    </Grid>
+</Window>
